@@ -12,7 +12,7 @@ return {
                     desc = 'Open Yazi',
                     desc_hl = 'String',
                     key = 'y',
-                    keymap = 'SPC f ',
+                    -- keymap = 'SPC f ',
                     key_hl = 'Number',
                     key_format = ' %s', -- remove default surrounding `[]`
                     action = 'Yazi'
@@ -21,7 +21,7 @@ return {
                     icon = '  ',
                     desc = 'Telescope find',
                     key = 'f',
-                    keymap = 'SPC f ',
+                    -- keymap = 'SPC f ',
                     key_format = ' %s', -- remove default surrounding `[]`
                     action = 'Telescope fd'
                     },
@@ -29,7 +29,7 @@ return {
                       icon = '  ',
                       desc = 'Terminal',
                       key = 't',
-                      keymap = 'SPC f ',
+                      -- keymap = 'SPC f ',
                       key_format = ' %s', -- remove default surrounding `[]`
                       action = 'terminal'
                     },
@@ -37,15 +37,34 @@ return {
                       icon = '  ',
                       desc = 'Telescope old files',
                       key = 'o',
-                      keymap = 'SPC f ',
+                      -- keymap = 'SPC f ',
                       key_format = ' %s', -- remove default surrounding `[]`
                       action = 'Telescope oldfiles'
                       },
-
+		    {
+                      icon = '󰒓  ',
+                      desc = 'Neovim config',
+                      key = 'c',
+                      -- keymap = 'SPC f ',
+                      key_format = ' %s', -- remove default surrounding `[]`
+                      action = function ()
+                      	require("telescope.builtin").find_files({
+			    cwd = vim.fn.stdpath("config"),
+			})
+                      end
+                      },
+		     {
+                      icon = '󰏖  ',
+                      desc = 'Mason',
+                      key = 'm',
+                      -- keymap = 'SPC f ',
+                      key_format = ' %s', -- remove default surrounding `[]`
+                      action = 'Mason'
+                      },
                 },
                 footer = {}  --your footer
               }
-       }
+	  }
      end,
      dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
