@@ -29,5 +29,6 @@ return {
 	  debounce_ms = 300,
 	})
       end,
-    }
+    },
+    'j-hui/fidget.nvim',
 }

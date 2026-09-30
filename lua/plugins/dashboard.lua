@@ -5,14 +5,17 @@ return {
         require('dashboard').setup {
             theme = 'doom',
               config = {
-                header = {}, --your header
-                center = {
+                header = {
+		  " /\\_/\\",
+		  "( o.o )",
+		  " > ^ <",
+		},
+		center = {
                   {
                     icon = '  ',
                     desc = 'Open Yazi',
                     desc_hl = 'String',
                     key = 'y',
-                    -- keymap = 'SPC f ',
                     key_hl = 'Number',
                     key_format = ' %s', -- remove default surrounding `[]`
                     action = 'Yazi'
@@ -61,6 +64,13 @@ return {
                       key_format = ' %s', -- remove default surrounding `[]`
                       action = 'Mason'
                       },
+		      {
+			  icon = '󰒲  ',
+			  desc = 'Lazy',
+			  key = 'l',
+			  key_format = ' %s',
+			  action = 'Lazy'
+		      },
                 },
                 footer = {}  --your footer
               }
