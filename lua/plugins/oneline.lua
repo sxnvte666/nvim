@@ -14,7 +14,6 @@ return {
 	    require('nvim-autopairs').setup({})
 	end,
     },
-    'j-hui/fidget.nvim',
     {
       'mrcjkb/rustaceanvim',
       -- To avoid being surprised by breaking changes,
@@ -25,15 +24,15 @@ return {
       lazy = false,
     },
     'uga-rosa/ccc.nvim',
-    {
-	"nvim-neo-tree/neo-tree.nvim",
-	branch = "v3.x",
-	dependencies = {
-	  "nvim-lua/plenary.nvim",
-	  "MunifTanjim/nui.nvim",
-	  "nvim-tree/nvim-web-devicons", -- optional, but recommended
-	},
-	lazy = false,
-    }
+	--    {
+	-- "nvim-neo-tree/neo-tree.nvim",
+	-- branch = "v3.x",
+	-- dependencies = {
+	--   "nvim-lua/plenary.nvim",
+	--   "MunifTanjim/nui.nvim",
+	--   "nvim-tree/nvim-web-devicons", -- optional, but recommended
+	-- },
+	-- lazy = false,
+	--    }
 }
 
